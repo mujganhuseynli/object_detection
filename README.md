@@ -1,6 +1,17 @@
-# Object-Detector-App
+# Assistive System for Visually Impaired Users
 
-A real-time object recognition application using [Google's TensorFlow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection) and [OpenCV](http://opencv.org/).
+## Overview
+
+This project implements an assistive system designed to aid visually impaired users. The system leverages deep learning models, real-time computer vision, and various hardware components to provide a comprehensive solution for obstacle detection, path navigation, and voice command processing using [Google's TensorFlow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection) and [OpenCV](http://opencv.org/).
+
+## Features
+
+- **Obstacle Detection and Path Navigation**: Utilizes OpenCV for real-time computer vision processing to detect obstacles and navigate paths.
+- **Deep Learning Models**: Implements TensorFlow for developing and deploying deep learning models that enhance the system's accuracy and efficiency.
+- **Location Tracking**: Integrates GPS modules to provide precise location tracking, ensuring users can navigate safely and accurately.
+- **Sensor Data Management**: Uses Arduino to manage sensor data, improving the system's responsiveness and reliability.
+- **Voice Command Processing**: Employs Google Speech-to-Text API to convert voice commands into actions, offering a hands-free experience and increasing accessibility.
+
 
 ## Getting Started
 1. `conda env create -f environment.yml`
@@ -24,11 +35,3 @@ pytest -vs utils/
 - [TensorFlow 1.2](https://www.tensorflow.org/)
 - [OpenCV 3.0](http://opencv.org/)
 
-## Notes
-- OpenCV 3.1 might crash on OSX after a while, so that's why I had to switch to version 3.0. See open issue and solution [here](https://github.com/opencv/opencv/issues/5874).
-- Moving the `.read()` part of the video stream in a multiple child processes did not work. However, it was possible to move it to a separate thread.
-
-## Copyright
-
-See [LICENSE](LICENSE) for details.
-Copyright (c) 2017 [Dat Tran](http://www.dat-tran.com/).
